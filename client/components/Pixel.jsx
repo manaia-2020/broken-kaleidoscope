@@ -17,11 +17,17 @@ class Pixel extends React.Component {
       })
   }
 
+  hover = () => {
+    this.setState ({
+      backgroundColor: 'white'
+    })
+  }
+
     render () {
         const {width, height, backgroundColor} = this.state
         const style = {width, height, backgroundColor}
         return (
-            <div style={style} onClick={this.changeColor}>
+            <div style={style} onClick={this.changeColor} onMouseEnter={this.hover}>
             </div>
         )
     }
