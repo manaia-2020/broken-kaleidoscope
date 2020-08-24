@@ -4,16 +4,16 @@ import Pixel from './Pixel'
 const App = () => {
   return (
     <div>
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
-    <Pixel width='20px' height='20px' colour='cornflowerblue' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
+    <Pixel width='50px' height='50px' />
     </div>
   )
 }
