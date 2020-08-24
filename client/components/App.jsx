@@ -4,16 +4,7 @@ import Pixel from './Pixel'
 const App = () => {
   return (
     <div>
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
-    <Pixel width='50px' height='50px' />
+      {Array.from({length: 100000}, (v, i) => <Pixel key={i} width='3px' height='3px' />)}
     </div>
   )
 }
