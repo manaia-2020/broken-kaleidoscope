@@ -3,7 +3,13 @@ import React from 'react'
 class Pixel extends React.Component {
     render() {
         return (
-            <div>Hello</div>
+            <div style={{
+                fontFamily: 'Verdana',
+                height: '50px',
+                width: '50px',
+                backgroundColor: 'red',
+            }}>
+            </div>
         )
     }
 }
