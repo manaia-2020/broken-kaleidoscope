@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const Pixel = () => {
-  return (
-    <div style={{
-      height: 200,
-      width: 200,
-      backgroundColor: "cornflowerblue"
-    }}> </div>
-  )
+class Pixel extends React.Component {
+  state = {
+    style: { height: 200, width: 200, backgroundColor: 'cornflowerblue' },
+  };
+
+  render() {
+    return <div style={this.state.style}></div>;
+  }
 }
 
-export default Pixel
+export default Pixel;
