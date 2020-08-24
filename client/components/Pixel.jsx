@@ -6,6 +6,11 @@ const randomHexColor = () =>
 class Pixel extends Component {
     constructor(props) {
         super(props)
+<<<<<<< HEAD
+=======
+           const randomHexColor = () =>
+              `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+>>>>>>> b56f618f423de77bc12dca5f212b75875f1e5801
             
         this.state = {
             style : {
