@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom'
 
 import App from './components/App'
 
+
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <App />,
+      <App />, 
     document.getElementById('app')
   )
 })
+
