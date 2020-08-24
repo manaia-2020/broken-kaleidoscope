@@ -4,7 +4,7 @@ import Pixel from './Pixel'
 const App = () => {
   return (
     <>
-    <div class="container" style={{width: '100%'}}>
+    <div className="container" style={{width: '100%'}}>
     <Pixel />
     <Pixel />
     <Pixel />

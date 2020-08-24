@@ -1,11 +1,14 @@
 import React from 'react'
 
+
+const randomColour = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`
+
 class Pixel extends React.Component {
 
     state = {
         height: '50px',
         width: '50px',
-        backgroundColor: 'red',
+        backgroundColor: randomColour(),
     }
 
     render() {
