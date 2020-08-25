@@ -31,18 +31,18 @@ class Pixel extends React.Component {
   makeWhite = (event) => {
     this.setState({
       backgroundColor: 'white',
-    })
-  }
-  makeYellow = (event => {
+    });
+  };
+  makeYellow = (event) => {
     this.setState({
       backgroundColor: 'yellow',
-    })
-  })
+    });
+  };
 
   render() {
     const style = {
-      width: 50,
-      height: 50,
+      width: 3,
+      height: 3,
       backgroundColor: this.state.backgroundColor,
     };
     return (
