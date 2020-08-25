@@ -16,4 +16,17 @@ describe('<Pixel />', () => {
     expect(colour).not.toBe(previousColour)
     expect(colour).toContain('white')
   })
+
+  test('check if the colour changes on click', () => {
+    render(<Pixel width='20px' height='20px' />)
+
+    const button = screen.getByRole('button', {hidden: true})
+
+    const previousColour = button.style.backgroundColor
+    fireEvent.click(button)
+    const colour = button.style.backgroundColor
+
+    expect.assertions(1)
+    expect(colour).not.toBe(previousColour)
+  })
 })
