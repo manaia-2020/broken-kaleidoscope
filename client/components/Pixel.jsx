@@ -33,11 +33,22 @@ class Pixel extends Component {
           }
         })
       }
+      // onRightClickHandler = evt => {
+      //   evt.preventDefault().oncontextmenu
+      //   this.setState({
+      //     style: {
+      //       height: '200px',
+      //       width: '200px',
+      //       backgroundColor: 'black'
+      //     }
+      //   })
+      // }
         render() {
            return(
                 <div style={this.state.style} 
                 onClick={() => this.clickHandler()}
                 onMouseEnter={() => this.onHoverHandler()}
+                // onRightClick={() => this.onRightClickHandler()}
                 />
                 
            )
