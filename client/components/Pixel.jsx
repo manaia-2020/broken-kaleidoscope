@@ -75,7 +75,7 @@ class Pixel extends React.Component {
     render() {
         const { style } = this.state
         return (
-            <div style={style} onClick={this.clickHandler}
+            <div role='main' style={style} onClick={this.clickHandler}
                 onMouseEnter={this.mouseEnterHandler} onContextMenu={this.contextHandler}
                 onDoubleClick={this.doubleClickHandler} onDragEnter={this.onDragHandler}>
 
