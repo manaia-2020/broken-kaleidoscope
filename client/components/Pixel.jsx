@@ -32,7 +32,7 @@ class Pixel extends React.Component {
 
     render() {
         return (
-            <div style={{
+            <div role='main' style={{
                 height: this.state.height,
                 width: this.state.width,
                 backgroundColor: this.state.backgroundColor,

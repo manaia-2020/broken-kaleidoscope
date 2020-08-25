@@ -28,10 +28,7 @@
     ]
   },
   "jest": {
-    "testURL": "http://localhost",
-    "setupFiles": [
-      "./client/testing/setup.js"
-    ]
+    "testURL": "http://localhost"
   },
   "dependencies": {
     "express": "^4.17.1"
@@ -42,6 +39,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@testing-library/react": "^10.4.9",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
