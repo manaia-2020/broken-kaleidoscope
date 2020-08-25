@@ -11,6 +11,12 @@ class Pixel extends React.Component {
         backgroundColor: randomHexColor()
   }
 
+  componentDidMount() {
+    setInterval(() => {
+      this.changeColor()
+    }, 5);
+  }
+
   changeColor = event => {
       this.setState ({
           backgroundColor: randomHexColor()
@@ -27,7 +33,9 @@ class Pixel extends React.Component {
         const {width, height, backgroundColor} = this.state
         const style = {width, height, backgroundColor}
         return (
-            <div style={style} onClick={this.changeColor} onMouseEnter={this.hover}>
+            <div style={style} 
+            onClick={this.changeColor} 
+            onMouseEnter={this.hover}>
             </div>
         )
     }
