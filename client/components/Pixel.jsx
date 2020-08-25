@@ -41,12 +41,12 @@ class Pixel extends React.Component {
 
   render() {
     const style = {
-      width: 3,
-      height: 3,
+      width: 10,
+      height: 10,
       backgroundColor: this.state.backgroundColor,
     };
     return (
-      <div
+      <div role='button'
         onClick={this.changeColor}
         style={style}
         onMouseEnter={this.makeGreen}
