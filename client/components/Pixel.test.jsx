@@ -15,4 +15,14 @@ describe('Test Pixel Component', () => {
         expect(expected).toContain('height: 40')
     })
 
+    test('contextHandler changes pixel colour to black', () => {
+        render(<Pixel />)
+
+        let div = screen.getByRole('main')
+
+        fireEvent.contextMenu(div)
+
+        let expected = screen.getByRole('main').getAttribute('style')
+        expect(expected).toContain('background: black')
+    })
 })
