@@ -31,7 +31,8 @@
     "testURL": "http://localhost"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "testing": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
