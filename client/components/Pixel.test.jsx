@@ -25,4 +25,37 @@ describe('Test Pixel Component', () => {
         let expected = screen.getByRole('main').getAttribute('style')
         expect(expected).toContain('background: black')
     })
+
+    test('mouseEnterHandler changes pixel colour to green', () => {
+        render(<Pixel />)
+
+        let div = screen.getByRole('main')
+
+        fireEvent.mouseEnter(div)
+
+        let expected = screen.getByRole('main').getAttribute('style')
+        expect(expected).toContain('background: green')
+    })
+
+    test('doubleClickHandler changes pixel colour to white', () => {
+        render(<Pixel />)
+
+        let div = screen.getByRole('main')
+
+        fireEvent.doubleClick(div)
+
+        let expected = screen.getByRole('main').getAttribute('style')
+        expect(expected).toContain('background: white')
+    })
+
+    test('onDragHandler changes pixel colour to yellow', () => {
+        render(<Pixel />)
+
+        let div = screen.getByRole('main')
+
+        fireEvent.dragEnter(div)
+
+        let expected = screen.getByRole('main').getAttribute('style')
+        expect(expected).toContain('background: yellow')
+    })
 })
