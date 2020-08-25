@@ -10,6 +10,24 @@ class Pixel extends React.Component{
         backgroundColor: randomHexColor()
     }
 
+    clickHandler = evt => {
+        this.setState({
+         backgroundColor: randomHexColor()
+        })
+      }
+
+    mouseEnterHandler = evt =>{
+        this.setState({
+            backgroundColor:"green"
+        })
+    }
+
+    onMouseOut = evt =>{
+        this.setState({
+            backgroundColor: randomHexColor()
+        })
+    }
+
     rainbowPixel = () =>{
         this.setState({
             backgroundColor: randomHexColor()
@@ -18,7 +36,7 @@ class Pixel extends React.Component{
 
     render(){
         return(
-            <div style={this.state}>   
+            <div style={this.state}onClick={this.clickHandler} onMouseEnter={this.mouseEnterHandler} onMouseOut={this.onMouseOut}>   
             </div>
         )
     }
