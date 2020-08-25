@@ -45,7 +45,7 @@ class Pixel extends Component {
       }
         render() {
            return(
-                <div style={this.state.style} 
+                <div role='button' style={this.state.style} 
                 onClick={(e) => this.clickHandler(e)}
                 onMouseEnter={(e) => this.onHoverHandler(e)}
                 onContextMenu={(e) => this.onRightClickHandler(e)}
