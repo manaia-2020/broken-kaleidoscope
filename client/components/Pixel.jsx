@@ -27,47 +27,12 @@ class Pixel extends React.Component {
         })
     }
 
-    clickHandler = (event) => {
-        this.setRandomColour()
-    }
-
-    mouseEnterHandler = (event) => {
+    eventHandler = (colour) => {
         this.setState({
             style: {
                 height,
                 width,
-                background: 'green'
-            }
-        })
-    }
-
-    contextHandler = (event) => {
-        event.preventDefault()
-        this.setState({
-            style: {
-                height,
-                width,
-                background: 'black'
-            }
-        })
-    }
-
-    doubleClickHandler = event => {
-        this.setState({
-            style: {
-                height,
-                width,
-                background: 'white'
-            }
-        })
-    }
-
-    onDragHandler = event => {
-        this.setState({
-            style: {
-                height,
-                width,
-                background: 'yellow'
+                background: colour
             }
         })
     }
@@ -75,9 +40,9 @@ class Pixel extends React.Component {
     render() {
         const { style } = this.state
         return (
-            <div role='main' style={style} onClick={this.clickHandler}
-                onMouseEnter={this.mouseEnterHandler} onContextMenu={this.contextHandler}
-                onDoubleClick={this.doubleClickHandler} onDragEnter={this.onDragHandler}>
+            <div role='main' style={style} onClick={() => this.setRandomColour()}
+                onMouseEnter={() => this.eventHandler('green')} onContextMenu={() => this.eventHandler('black')}
+                onDoubleClick={() => this.eventHandler('white')} onDragEnter={() => this.eventHandler('yellow')}>
 
             </div>
         )
