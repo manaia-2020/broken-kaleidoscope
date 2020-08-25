@@ -19,7 +19,7 @@ describe('<Pixel />', () => {
 
   test('check if the colour changes on click', () => {
     render(<Pixel width='20px' height='20px' />)
-
+    
     const button = screen.getByRole('button', {hidden: true})
 
     const previousColour = button.style.backgroundColor
