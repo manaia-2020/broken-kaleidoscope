@@ -3,57 +3,7 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <div>React development has begun!
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-    <Pixel/>
-
-
-    </div>
-    
+    Array.from({length: 1000}, (v, i) => <Pixel/>)
   )
 }
 

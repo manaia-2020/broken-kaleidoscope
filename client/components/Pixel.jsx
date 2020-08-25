@@ -5,21 +5,33 @@ const randomHexColor = () =>
 
 class Pixel extends React.Component {
 state = {
-  height: "100px",
+  height: "90px",
   backgroundColor: randomHexColor(),
-  width: "100px"
+  width: "90px",
+  backgroundImage: ""
 }
-clickHandler = evt => {
+
+
+
+clickHandler = () => {
+  console.log("Im working!")
   this.setState({
+  backgroundImage: '',
   backgroundColor: randomHexColor()
+  })
+}
+hoverHandler = () => {
+  this.setState({
+    backgroundImage: 'url("./ferby.jpg")'
+    
   })
 }
 render() {
   return ( 
-    <div onClick={this.clickHandler} style={
+    <div onMouseOver={this.hoverHandler} onClick={this.clickHandler} style={
       this.state
       }>
-        <p>i am awesome</p>
+        
         
     </div>
   )
