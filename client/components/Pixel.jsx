@@ -15,6 +15,7 @@ class Pixel extends React.Component {
     setInterval(() => {
       this.changeColor()
     }, 5);
+
   }
 
   changeColor = event => {
@@ -33,7 +34,7 @@ class Pixel extends React.Component {
         const {width, height, backgroundColor} = this.state
         const style = {width, height, backgroundColor}
         return (
-            <div style={style} 
+            <div role="button" style={style} 
             onClick={this.changeColor} 
             onMouseEnter={this.hover}>
             </div>
