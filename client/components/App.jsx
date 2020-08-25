@@ -1,10 +1,10 @@
 import React from 'react'
 import Pixel from './Pixel'
 
-const App = () => {
+const App = (props) => {
   return (
     <div>
-      {Array.from({length: 1000}, (v, i) => <Pixel key={i} width='30px' height='30px' />)}
+      {Array.from({length: props.length}, (v, i) => <Pixel key={i} width='30px' height='30px' />)}
     </div>
   )
 }
