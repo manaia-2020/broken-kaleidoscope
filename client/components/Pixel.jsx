@@ -15,7 +15,7 @@ class Pixel extends Component {
             }
         }
     }
-    clickHandler = evt => {
+    clickHandler = e => {
         this.setState({
           style: {
             height: '200px',
@@ -24,7 +24,7 @@ class Pixel extends Component {
           }
         })
       }
-      onHoverHandler = evt => {
+      onHoverHandler = e => {
         this.setState({
           style: {
             height: '200px',
@@ -32,42 +32,27 @@ class Pixel extends Component {
             backgroundColor: 'green'
           }
         })
+    }
+      onRightClickHandler = e => {
+        e.preventDefault()
+        this.setState({
+          style: {
+            height: '200px',
+            width: '200px',
+            backgroundColor: 'black'
+          }
+        })
       }
-      // onRightClickHandler = evt => {
-      //   evt.preventDefault().oncontextmenu
-      //   this.setState({
-      //     style: {
-      //       height: '200px',
-      //       width: '200px',
-      //       backgroundColor: 'black'
-      //     }
-      //   })
-      // }
         render() {
            return(
                 <div style={this.state.style} 
-                onClick={() => this.clickHandler()}
-                onMouseEnter={() => this.onHoverHandler()}
-                // onRightClick={() => this.onRightClickHandler()}
+                onClick={(e) => this.clickHandler(e)}
+                onMouseEnter={(e) => this.onHoverHandler(e)}
+                onContextMenu={(e) => this.onRightClickHandler(e)}
                 />
                 
            )
-        
         }
 }
-
-    
-
-// const Pixel = () =>{
-//     return (
-//     <div style={{
-//       height: '200px',
-//       width: '200px',
-//       backgroundColor: "blue"
-//     }}>
-
-//     </div>
-//     )
-// }
 
 export default Pixel
