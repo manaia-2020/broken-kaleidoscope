@@ -4,6 +4,9 @@ const randomHexColor = () =>
     .toString(16)
     .padStart(6, 0)}`;
 class Pixel extends React.Component {
+  randomHexColor = () =>
+    `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
   state = {
     width: this.props.width,
     height: this.props.height,
