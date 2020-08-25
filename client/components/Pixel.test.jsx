@@ -63,15 +63,17 @@ describe('Test Pixel Component', () => {
         render(<Pixel />)
 
         let div = screen.getByRole('main')
-        let divDOM = screen.getByRole('main').getAttribute('style')
+
+        let divDOM = div.getAttribute('style')
+
         let index = divDOM.indexOf('rgb')
         let actual = divDOM.substring(index)
 
         fireEvent.click(div)
 
-        let div2DOM = screen.getByRole('main').getAttribute('style')
+        let div2DOM = div.getAttribute('style')
         let expected = div2DOM.substring(index)
-        
+
         expect(actual).not.toMatch(expected)
     })
 })
