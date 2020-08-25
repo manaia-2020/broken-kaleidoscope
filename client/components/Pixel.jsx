@@ -28,6 +28,16 @@ class Pixel extends React.Component {
       backgroundColor: 'black',
     });
   };
+  makeWhite = (event) => {
+    this.setState({
+      backgroundColor: 'white',
+    })
+  }
+  makeYellow = (event => {
+    this.setState({
+      backgroundColor: 'yellow',
+    })
+  })
 
   render() {
     const style = {
@@ -41,6 +51,8 @@ class Pixel extends React.Component {
         style={style}
         onMouseEnter={this.makeGreen}
         onContextMenu={this.makeBlack}
+        onDoubleClick={this.makeWhite}
+        onDragEnter={this.makeYellow}
       ></div>
     );
   }
