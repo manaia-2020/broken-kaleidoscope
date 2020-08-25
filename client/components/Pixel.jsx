@@ -27,8 +27,8 @@ class Pixel extends React.Component {
 
   }
   render() {
-    const style = { width, height, backgroundColor };
-    return <div style={style} onClick={this.changeColor}  onMouseEnter={this.makeGreen}></div>
+    const style = { width: 50, height: 50, backgroundColor: this.state.backgroundColor };
+    return <div onClick={this.changeColor} style={style} onMouseEnter={this.makeGreen}></div>
   }
 }
 
