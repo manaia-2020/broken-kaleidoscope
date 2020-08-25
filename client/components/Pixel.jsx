@@ -16,6 +16,12 @@ class Pixel extends React.Component {
         })
     }
 
+    mouseOverHandler = (event) => {
+        this.setState({        
+            backgroundColor: randomColour()
+        })
+    }
+
     render() {
         return (
             <div style={{
@@ -23,7 +29,8 @@ class Pixel extends React.Component {
                 width: this.state.width,
                 backgroundColor: this.state.backgroundColor,
             }}
-            onMouseOver={() => this.clickHandler()}>
+            onClick={() => this.clickHandler()}
+            onMouseOver={() => this.mouseOverHandler()}>
             </div>
         )
     }
