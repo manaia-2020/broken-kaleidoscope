@@ -7,8 +7,8 @@ const randomHexColor = () =>
 
 class Pixel extends React.Component {
   state = {
-    height: "50px",
-    width: "50px",
+    height: "20px",
+    width: "20px",
     backgroundColor: randomHexColor(),
   };
 
