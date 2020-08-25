@@ -5,9 +5,17 @@ const randomColour = () => `#${Math.floor(Math.random() * 0x1000000).toString(16
 class Pixel extends React.Component {
 
     state = {
-        height: '50px',
-        width: '50px',
+        height: '30px',
+        width: '30px',
         backgroundColor: randomColour(),
+    }
+    
+    componentDidMount () {
+        setInterval(() => {
+            this.setState({        
+                backgroundColor: randomColour()
+            })
+        }, 100);
     }
 
     clickHandler = (event) => {
@@ -17,8 +25,8 @@ class Pixel extends React.Component {
     }
 
     mouseOverHandler = (event) => {
-        this.setState({        
-            backgroundColor: randomColour()
+        this.setState({
+            backgroundColor: "black"
         })
     }
 
