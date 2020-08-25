@@ -1,12 +1,24 @@
 import React from 'react';
-
+const randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000)
+    .toString(16)
+    .padStart(6, 0)}`;
 class Pixel extends React.Component {
   state = {
-    style: { height: 200, width: 200, backgroundColor: 'cornflowerblue' },
+    width: this.props.width,
+    height: this.props.height,
+    backgroundColor: randomHexColor(),
+  };
+
+  changeColor = (event) => {
+    this.setState({
+      backgroundColor: randomHexColor(),
+    });
   };
 
   render() {
-    return <div style={this.state.style}></div>;
+    const style = { width: 50, height: 50, backgroundColor: randomHexColor() };
+    return <div onClick={this.changeColor} style={style}></div>;
   }
 }
 
