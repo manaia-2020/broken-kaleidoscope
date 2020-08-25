@@ -4,7 +4,7 @@ import {shallow} from 'enzyme'
 import App from './App'
 
 test('<App />', () => {
-  const expected = 'React development has begun!'
+  const expected = 'Pixel'
   const wrapper = shallow(<App />)
-  expect(wrapper.text()).toBe(expected)
+  expect(wrapper.text()).toContain(expected)
 })
