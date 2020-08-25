@@ -58,4 +58,20 @@ describe('Test Pixel Component', () => {
         let expected = screen.getByRole('main').getAttribute('style')
         expect(expected).toContain('background: yellow')
     })
+
+    test('clickHandler changes pixel colour', () => {
+        render(<Pixel />)
+
+        let div = screen.getByRole('main')
+        let divDOM = screen.getByRole('main').getAttribute('style')
+        let index = divDOM.indexOf('rgb')
+        let actual = divDOM.substring(index)
+
+        fireEvent.click(div)
+
+        let div2DOM = screen.getByRole('main').getAttribute('style')
+        let expected = div2DOM.substring(index)
+        
+        expect(actual).not.toMatch(expected)
+    })
 })
