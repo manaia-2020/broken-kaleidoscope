@@ -17,11 +17,21 @@ class Pixel extends React.Component {
         setInterval(this.setRandomColour, 2000)
     }
 
+    setRandomColour = () => {
+        this.setState({
+            style: {
+                height,
+                width,
+                background: randomColour()
+            }
+        })
+    }
+
     clickHandler = (event) => {
         this.setRandomColour()
     }
 
-    clickHandlerGreen = (event) => {
+    mouseEnterHandler = (event) => {
         this.setState({
             style: {
                 height,
@@ -62,28 +72,12 @@ class Pixel extends React.Component {
         })
     }
 
-    componentDidMount = () => {
-
-    }
-
-    setRandomColour = () => {
-        this.setState({
-            style: {
-                height,
-                width,
-                background: randomColour()
-            }
-        })
-    }
-
-
     render() {
         const { style } = this.state
         return (
             <div style={style} onClick={this.clickHandler}
-                onMouseEnter={this.clickHandlerGreen} onContextMenu={this.contextHandler}
-                onDoubleClick={this.doubleClickHandler} onDragEnter={this.onDragHandler}
-                onLoad={this.intervalStart}>
+                onMouseEnter={this.mouseEnterHandler} onContextMenu={this.contextHandler}
+                onDoubleClick={this.doubleClickHandler} onDragEnter={this.onDragHandler}>
 
             </div>
         )
@@ -91,6 +85,3 @@ class Pixel extends React.Component {
 }
 
 export default Pixel
-
-// https://stackoverflow.com/questions/41229332/react-uncaught-rangeerror-maximum-call-stack-size-exceeded
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion
