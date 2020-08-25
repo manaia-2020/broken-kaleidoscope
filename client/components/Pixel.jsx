@@ -7,9 +7,9 @@ const randomHexColor = () =>
 
 class Pixel extends React.Component {
   state = {
-    height: "20px",
-    width: "20px",
-    backgroundColor: randomHexColor(),
+    height: "100px",
+    width: "100px",
+    backgroundColor: randomHexColor()
   };
 
   clickHandler = (evt) => {
@@ -25,12 +25,6 @@ class Pixel extends React.Component {
   };
 
   onMouseOut = (evt) => {
-    this.setState({
-      backgroundColor: randomHexColor(),
-    });
-  };
-
-  rainbowPixel = () => {
     this.setState({
       backgroundColor: randomHexColor(),
     });
@@ -55,6 +49,17 @@ class Pixel extends React.Component {
     });
   }
 
+  changeColor = (evt) =>{
+      this.setState({
+        backgroundColor: randomHexColor()
+      })
+  }
+  componentDidMount() {
+    setInterval(() => {
+      this.changeColor()
+    }, 13);
+  }
+  
   render() {
     return (
       <div 
