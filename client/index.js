@@ -5,7 +5,7 @@ import App from './components/App'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <App />,
+    <App length='1000' />,
     document.getElementById('app')
   )
 })
