@@ -15,7 +15,7 @@ describe('Test Pixel Component', () => {
         expect(expected).toContain('height: 40')
     })
 
-    test('contextHandler changes pixel colour to black', () => {
+    test('onContextMenu changes pixel colour to black', () => {
         render(<Pixel />)
 
         let div = screen.getByRole('main')
@@ -26,7 +26,7 @@ describe('Test Pixel Component', () => {
         expect(expected).toContain('background: black')
     })
 
-    test('mouseEnterHandler changes pixel colour to green', () => {
+    test('onMouseEnter changes pixel colour to green', () => {
         render(<Pixel />)
 
         let div = screen.getByRole('main')
@@ -37,7 +37,7 @@ describe('Test Pixel Component', () => {
         expect(expected).toContain('background: green')
     })
 
-    test('doubleClickHandler changes pixel colour to white', () => {
+    test('onDoubleClick changes pixel colour to white', () => {
         render(<Pixel />)
 
         let div = screen.getByRole('main')
@@ -48,7 +48,7 @@ describe('Test Pixel Component', () => {
         expect(expected).toContain('background: white')
     })
 
-    test('onDragHandler changes pixel colour to yellow', () => {
+    test('onDragEnter changes pixel colour to yellow', () => {
         render(<Pixel />)
 
         let div = screen.getByRole('main')
@@ -59,7 +59,7 @@ describe('Test Pixel Component', () => {
         expect(expected).toContain('background: yellow')
     })
 
-    test('clickHandler changes pixel colour', () => {
+    test('onClick changes pixel colour', () => {
         render(<Pixel />)
 
         let div = screen.getByRole('main')
